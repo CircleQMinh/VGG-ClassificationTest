@@ -137,7 +137,7 @@ print(modelVGG19.summary())
 
 
 
-
+#demo dự đoán ảnh với vgg
 
 
 
@@ -258,28 +258,28 @@ def createModelVGG19():
 
 
 
-model=createModelVGG16()
-from keras.preprocessing.image import ImageDataGenerator 
+#model=createModelVGG16()
+#from keras.preprocessing.image import ImageDataGenerator 
 
-img_width=224
-img_height=224
+#img_width=224
+#img_height=224
 
-train_datagen = ImageDataGenerator(rescale = 1./255,
-                                   shear_range = 0.2,
-                                   zoom_range = 0.2,
-                                   horizontal_flip = True)
-training_set = train_datagen.flow_from_directory('Train',
-                                                 target_size = (img_width, img_height),
-                                                 batch_size = 32,
-                                                 class_mode = 'categorical')
+#train_datagen = ImageDataGenerator(rescale = 1./255,
+#                                   shear_range = 0.2,
+#                                   zoom_range = 0.2,
+#                                   horizontal_flip = True)
+#training_set = train_datagen.flow_from_directory('Train',
+#                                                 target_size = (img_width, img_height),
+#                                                 batch_size = 32,
+#                                                 class_mode = 'categorical')
+#
+#test_datagen = ImageDataGenerator(rescale = 1./255)
+#test_set = test_datagen.flow_from_directory('Test',
+#                                            target_size = (img_width, img_height),
+#                                            batch_size = 32,
+#                                            class_mode = 'categorical')
 
-test_datagen = ImageDataGenerator(rescale = 1./255)
-test_set = test_datagen.flow_from_directory('Test',
-                                            target_size = (img_width, img_height),
-                                            batch_size = 32,
-                                            class_mode = 'categorical')
-
-history=model.fit(x = training_set, validation_data = test_set, epochs =  20)
+#history=model.fit(x = training_set, validation_data = test_set, epochs =  20)
 
 
 

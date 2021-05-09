@@ -117,12 +117,10 @@ print(modelVGG19.summary())
 
 
 
-# 1 số thông số
+# 1 số thông số của hàm VGG16()
 
-#include_top (True): Có bao gồm các lớp đầu ra cho mô hình hay không. 
-#Bạn không cần những thứ này nếu bạn đang lắp mô hình cho vấn đề của riêng mình.
-#weights (‘imagenet‘): Trọng số cần tải. Bạn có thể chỉ định Không có để không
-# tải trọng lượng được đào tạo trước nếu bạn muốn tự đào tạo người mẫu từ đầu.
+#include_top (True): Có bao gồm các lớp đầu ra(3 fully-connected layers) cho mô hình hay không. 
+#weights (‘imagenet‘): Trọng số cần tải. Bạn có thể chỉ định 1 weight nếu để trống sẽ mặc định là 'imagenet'
 #input_tensor (Không có): Lớp đầu vào mới nếu bạn có ý định điều chỉnh mô hình
 # trên dữ liệu mới có kích thước khác.
 #input_shape (Không có): Kích thước hình ảnh mà mô hình dự kiến sẽ nhận nếu 
